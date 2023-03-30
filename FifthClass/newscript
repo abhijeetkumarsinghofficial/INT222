@@ -1,0 +1,48 @@
+// const http = require ("http");
+// function reqListner(req,req){
+//     console.log("Inside Server!");
+//     // ! console.log(req);
+//     console.log(req.headers); // used to get the header of the request means the information about the request
+// }
+// res.write("Welcome to LPU");
+
+// const server = http.createServer(reqListner);
+// server.listen(3000)
+
+// todo ////////////
+const http = require("http");
+
+function reqListner(req, res) {
+  console.log("Inside Server!");
+  // ! Set response header
+  res.setHeader("Content-Type", "text/plain");
+  // * Send "hello world" response
+  res.write("Welcome Lpu");
+  res.end();
+}
+const server = http.createServer(reqListner);
+server.listen(3000);
+
+
+
+
+// const http = require("http");
+
+// function reqListner(req, res) {
+//   console.log("Inside Server!");
+
+// }
+// *  // Set response header
+//   res.setHeader("Content-Type", "text/plain");
+
+//   // Send "hello world" response
+//   res.write("Hello, world!");
+//   res.end();
+// }
+
+// const server = http.createServer(reqListner);
+// server.listen(3000);
+
+
+
+
